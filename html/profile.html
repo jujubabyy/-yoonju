@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
+  </head>
+  <body>
+    <header>
+      <h1>Yoonju's Profile</h1>
+    </header>
+    <main>
+      <section class="about">
+        <img src="/imgs/IMG_3053.JPG" alt="Profile image" class="profileImg" />
+        <p>
+          Hello! I'm Yoonju Hwang. I was an artist who used to paint, but I'm
+          starting a new path as a designer.
+        </p>
+      </section>
+      <section class="interests">
+        <h2>Interests</h2>
+        <ul>
+          <li>UX/UI design</li>
+          <li>Graphic design</li>
+          <li>Video Gaming</li>
+          <li>Exploring creative tools</li>
+        </ul>
+      </section>
+      <section class="contact">
+        <h2>Contact Me</h2>
+        <p>
+          If you'd like to collaborate or just say hi, feel free to reach out!
+          🤍✨
+        </p>
+        <form action="submit_form.php" method="POST">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+          <br />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <br />
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+          <br />
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 Yoonju Hwang. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
