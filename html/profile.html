@@ -3,35 +3,112 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Profile</title>
-    <!-- <link rel="stylesheet" href="styles.css" /> -->
+    <title>Yoonju's Profile</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-image: url(imgs/pinkbg.jpeg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        font-family: "Roboto", sans-serif;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+      }
+
+      header h1 {
+        font-size: 3em;
+        text-align: center;
+        margin-top: 50px;
+      }
+
+      .profileImg {
+        width: 200px;
+        height: auto;
+        display: block;
+        margin: 20px auto;
+        border-radius: 50%;
+        border: 3px solid #fff;
+      }
+
+      .about,
+      .interests,
+      .contact {
+        background: rgba(180, 120, 140, 0.6);
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 800px;
+        border-radius: 10px;
+      }
+
+      .about p,
+      .contact p {
+        line-height: 1.6;
+      }
+    </style>
   </head>
   <body>
     <header>
-      <h1>Yoonju's Profile</h1>
+      <h1>Yoonju's Profile 🎀</h1>
     </header>
     <main>
       <section class="about">
-        <img src="/imgs/IMG_3053.JPG" alt="Profile image" class="profileImg" />
+        <img src="imgs/IMG_3049.JPG" alt="Profile image" class="profileImg" />
         <p>
-          Hello! I'm Yoonju Hwang. I was an artist who used to paint, but I'm
-          starting a new path as a designer.
+          Hello! I'm Yoonju Hwang.
+          <br />
+          I was born and raised in Seoul, Korea.
+          <br />
+          I started as an artist, focusing on painting and creative works.
+          <br />
+          Now I'm exploring a new path as a product designer, blending
+          creativity with functionality.
+        </p>
+        <p>
+          I have a deep love for art and design.
+          <br />
+          Music is also a huge part of my life—I'm especially into R&B, Hip-Hop,
+          and Pop.
+          <br />
+          And yes, I'm a gamer! I spend way too much time playing Overwatch 2,
+          Sims 4 and Valorant.
+          <br />
+          When I'm not gaming, I'm probably watching TV shows. <The Office> is my
+          favorite.
+          <br />
+          If you've made it this far, you've probably guessed—yes I'm an
+          oversharer...
+          <br />
+          I'm INFP, so I might seem a little reserved at first, but I'm super
+          friendly once you get to know me 🩰
         </p>
       </section>
       <section class="interests">
         <h2>Interests</h2>
         <ul>
-          <li>UX/UI design</li>
-          <li>Graphic design</li>
-          <li>Video Gaming</li>
-          <li>Exploring creative tools</li>
+          <li>UX/UI Design</li>
+          <li>Video gaming</li>
+          <li>Content Creating</li>
+          <li>Programming</li>
         </ul>
       </section>
       <section class="contact">
         <h2>Contact Me</h2>
         <p>
           If you'd like to collaborate or just say hi, feel free to reach out!
-          🤍✨
+          🩷✨
+        </p>
+        <p>
+          Instagram
+          <a href="https://www.instagram.com/hwachoerri" target="_blank">
+            @hwachoerri
+          </a>
+          <br />
+          Discord @jujubabyy
         </p>
         <form action="submit_form.php" method="POST">
           <label for="name">Name:</label>
@@ -47,8 +124,5 @@
         </form>
       </section>
     </main>
-    <footer>
-      <p>&copy; 2024 Yoonju Hwang. All rights reserved.</p>
-    </footer>
   </body>
 </html>
