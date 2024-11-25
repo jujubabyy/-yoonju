@@ -4,20 +4,18 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yoonju's Profile</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
     <style>
+      @import url("https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.9/static/pretendard.css");
+
       body {
+        font-family: "Pretendard", sans-serif;
         background-image: url(imgs/pinkbg.jpeg);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        font-family: "Roboto", sans-serif;
-        color: #fff;
         margin: 0;
         padding: 0;
+        color: #fff;
       }
 
       header h1 {
@@ -26,74 +24,287 @@
         margin-top: 50px;
       }
 
-      .profileImg {
+      .about-contact {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 20px;
+        gap: 20px;
+      }
+
+      .card {
+        background: rgba(255, 255, 255, 0.2);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(10px);
+      }
+
+      .about {
+        flex: 1;
+        text-align: left;
+      }
+
+      .about img {
         width: 200px;
         height: auto;
-        display: block;
-        margin: 20px auto;
         border-radius: 50%;
         border: 3px solid #fff;
+        margin-bottom: 20px;
       }
 
-      .about,
-      .contact {
-        background: rgba(180, 120, 140, 0.6);
-        padding: 20px;
-        margin: 20px auto;
-        max-width: 800px;
-        border-radius: 10px;
-      }
-
-      .about p,
-      .contact p {
+      .about p {
         line-height: 1.6;
+        max-width: 90%;
+        margin: 0 auto;
+      }
+
+      .social-buttons {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .social-buttons a {
+        display: inline-block;
+        text-decoration: none;
+        color: #fff;
+        background-color: #ff9ec4;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 1rem;
+        font-weight: bold;
+        margin: 0 10px;
+        transition: background-color 0.3s ease;
+      }
+
+      .social-buttons a:hover {
+        background-color: #ff78ad;
+      }
+
+      .contact {
+        flex: 1;
+      }
+
+      form {
+        max-width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+      }
+
+      form label {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-align: left;
+      }
+
+      form input,
+      form textarea {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 5px;
+        background: rgba(255, 255, 255, 0.2);
+        color: #fff;
+        font-size: 1rem;
+      }
+
+      form input::placeholder,
+      form textarea::placeholder {
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      form input:focus,
+      form textarea:focus {
+        outline: none;
+        border: 1px solid #ff9ec4;
+        background: rgba(255, 255, 255, 0.3);
+      }
+
+      button {
+        width: 100%;
+        padding: 15px;
+        font-size: 1.2rem;
+        color: #fff;
+        background-color: #ff9ec4;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #ff78ad;
+      }
+
+      .gallery-section {
+        max-width: 1200px;
+        padding: 20px;
+        margin: 40px auto;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(10px);
+      }
+
+      .gallery-title {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      .gallery-item {
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.3s ease;
+      }
+
+      .gallery-item:hover img {
+        transform: scale(1.1);
+      }
+
+      @media (max-width: 768px) {
+        .about-contact {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .about,
+        .contact {
+          flex: none;
+          text-align: center;
+        }
+
+        .about img {
+          margin: 0 auto 20px;
+        }
+
+        form {
+          width: 100%;
+        }
+
+        .gallery {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 480px) {
+        .gallery {
+          grid-template-columns: 1fr;
+        }
       }
     </style>
   </head>
   <body>
     <header>
-      <h1>Yoonju's Profile 🎀</h1>
+      <h1>Yoonju Hwang</h1>
     </header>
     <main>
-      <section class="about">
-        <img src="imgs/IMG_3049.JPG" alt="Profile image" class="profileImg" />
-        <p>
-          Hello! I'm Yoonju Hwang. I was born and raised in Seoul, Korea.
-          <br />
-          I started as an artist, focusing on painting and creative works.
-          <br />
-          Now I'm exploring a new path as a product designer, blending
-          creativity with functionality.
-          <br />
-          I'm INFP, so I might seem a little reserved at first, but I'm super
-          friendly once you get to know me 🩰
-        </p>
-      </section>
-      <section class="contact">
-        <h2>Contact Me</h2>
-        <p>
-          If you'd like to collaborate or just say hi, feel free to reach out:
-        </p>
-        <p>
-          Instagram
-          <a href="https://www.instagram.com/hwachoerri" target="_blank">
-            @hwachoerri
-          </a>
-          <br />
-          Discord @jujubabyy
-        </p>
-        <form action="submit_form.php" method="POST">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required />
-          <br />
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-          <br />
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
-          <br />
-          <button type="submit">Send</button>
-        </form>
+      <div class="about-contact">
+        <section class="about card">
+          <img src="imgs/IMG_3049.JPG" alt="Profile image" />
+          <p>
+            Hello! I'm Yoonju Hwang. I was born and raised in Seoul, Korea.
+            <br />
+            I started as an artist, focusing on painting and creative works.
+            <br />
+            Now I'm exploring a new path as a product designer, blending
+            creativity with functionality.
+            <br />
+            I'm INFP, so I might seem a little reserved at first, but I'm super
+            friendly once you get to know me 🩰
+          </p>
+          <div class="social-buttons">
+            <a href="https://www.instagram.com/hwachoerri" target="_blank"
+              >Instagram</a
+            >
+            <a href="https://discordapp.com/users/jujubabyy" target="_blank"
+              >Discord</a
+            >
+          </div>
+        </section>
+        <section class="contact card">
+          <h2>Contact Me</h2>
+          <p>
+            If you'd like to collaborate or just say hi, feel free to reach out:
+          </p>
+          <form action="submit_form.php" method="POST">
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your Name"
+              required
+            />
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+            <label for="message">Message:</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Your Message"
+              required
+            ></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+        </section>
+      </div>
+
+      <section class="gallery-section">
+        <h2 class="gallery-title">hellokitty 🎀</h2>
+        <div class="gallery">
+          <div class="gallery-item">
+            <img src="imgs/IMG_3050.JPG" alt="Gallery image 1" />
+          </div>
+          <div class="gallery-item">
+            <img src="imgs/IMG_3051.JPG" alt="Gallery image 2" />
+          </div>
+          <div class="gallery-item">
+            <img src="imgs/IMG_3052.JPG" alt="Gallery image 3" />
+          </div>
+          <div class="gallery-item">
+            <img src="imgs/IMG_3053.JPG" alt="Gallery image 4" />
+          </div>
+          <div class="gallery-item">
+            <img src="imgs/IMG_3054.JPG" alt="Gallery image 5" />
+          </div>
+          <div class="gallery-item">
+            <img src="imgs/IMG_3055.JPG" alt="Gallery image 6" />
+          </div>
+          <div class="gallery-item">
+            <img src="imgs/IMG_3056.JPG" alt="Gallery image 7" />
+          </div>
+          <div class="gallery-item">
+            <img src="imgs/IMG_3057.JPG" alt="Gallery image 7" />
+          </div>
+        </div>
       </section>
     </main>
   </body>
